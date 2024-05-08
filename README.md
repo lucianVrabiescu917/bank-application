@@ -7,7 +7,7 @@ Hello there! Welcome to my Bank Application (API) repository.
 To run the server, follow these steps:
 
 1. **Clone the Repository:**
-   git clone <repository_url>
+   git clone 'https://github.com/lucianVrabiescu917/bank-application.git'
 
  2. **Run Docker Compose:**
     docker-compose up
