@@ -15,4 +15,10 @@ To run the server, follow these steps:
 3. **Run the Application:**
 After running Docker Compose, you can access the application.
 
+4.**Populate database**
+Call the following endpoints to populate the database:
+  - Importer: `http://localhost:8091/importer/populate`
+  - Bank: `http://localhost:8091/bank/populate`
+  - Exporter: `http://localhost:8091/exporter/populate`
+
 That's it! You're now ready to use the Bank Application (API). If you encounter any issues or have any questions, feel free to reach out.
