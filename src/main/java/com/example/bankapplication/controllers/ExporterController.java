@@ -21,13 +21,13 @@ public class ExporterController {
     }
 
     @PostMapping(value = "/populate")
-    public ResponseEntity<HttpStatus> populateImporters() {
+    public ResponseEntity<HttpStatus> populateExporters() {
         exporterService.populateExporters();
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping(value = "/exporters")
-    public ResponseEntity<List<ExporterDto>> getImporters() {
+    public ResponseEntity<List<ExporterDto>> getExporters() {
         List<ExporterDto> exporterDtos = exporterService.getEntities();
         return new ResponseEntity<>(exporterDtos, HttpStatus.OK);
     }

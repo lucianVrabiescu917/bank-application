@@ -1,5 +1,6 @@
 package com.example.bankapplication.services;
 
+import com.example.bankapplication.aspects.LogStartEndExecution;
 import com.example.bankapplication.converters.ImporterConverter;
 import com.example.bankapplication.domain.Importer;
 import com.example.bankapplication.dto.ImporterDto;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 public class ImporterService extends BaseService<Importer, ImporterDto,
         ImporterRepository, ImporterConverter>{
 
+    @LogStartEndExecution
     @Transactional
     public void populateImporters() {
         Importer importer1 = new Importer();

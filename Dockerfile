@@ -25,4 +25,4 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Expose port
-EXPOSE 8090
+EXPOSE 8091

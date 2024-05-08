@@ -1,5 +1,6 @@
 package com.example.bankapplication.services;
 
+import com.example.bankapplication.aspects.LogStartEndExecution;
 import com.example.bankapplication.converters.BankConverter;
 import com.example.bankapplication.domain.Bank;
 import com.example.bankapplication.dto.BankDto;
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class BankService extends BaseService<Bank, BankDto,
         BankRepository, BankConverter>{
 
+    @LogStartEndExecution
     @Transactional
     public void populateBanks() {
         Bank bank1 = new Bank();

@@ -1,5 +1,6 @@
 package com.example.bankapplication.services;
 
+import com.example.bankapplication.aspects.LogStartEndExecution;
 import com.example.bankapplication.converters.ExporterConverter;
 import com.example.bankapplication.domain.Exporter;
 import com.example.bankapplication.dto.ExporterDto;
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class ExporterService extends BaseService<Exporter, ExporterDto,
         ExporterRepository, ExporterConverter> {
 
+    @LogStartEndExecution
     @Transactional
     public void populateExporters() {
         Exporter exporter1 = new Exporter();

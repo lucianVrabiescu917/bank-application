@@ -74,4 +74,10 @@ public class TransactionController {
         return new ResponseEntity<>(transactionDto, HttpStatus.OK);
     }
 
+    @PutMapping("/force-scheduled")
+    HttpEntity<TransactionDto> forceScheduled() {
+        transactionService.executeVATCalculation();
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }

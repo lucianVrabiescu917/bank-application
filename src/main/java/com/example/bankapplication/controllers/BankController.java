@@ -21,13 +21,13 @@ public class BankController {
     }
 
     @PostMapping(value = "/populate")
-    public ResponseEntity<HttpStatus> populateImporters() {
+    public ResponseEntity<HttpStatus> populateBanks() {
         bankService.populateBanks();
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping(value = "/banks")
-    public ResponseEntity<List<BankDto>> getImporters() {
+    public ResponseEntity<List<BankDto>> getBanks() {
         List<BankDto> bankDto = bankService.getEntities();
         return new ResponseEntity<>(bankDto, HttpStatus.OK);
     }
